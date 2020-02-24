@@ -4,7 +4,7 @@ image_config: &image_config
   # either as project-specific environment variables
   # or as resources in your organization's org-global Context
 
-  IMAGE_NAME: JavaNode
+  IMAGE_NAME: NodeJava
 
   IMAGE_TAG: latest
 
@@ -17,7 +17,7 @@ image_config: &image_config
 
   # RUBY_VERSION_NUM: # pick a version from https://cache.ruby-lang.org/pub/ruby
 
-  NODE_VERSION_NUM: erbium
+  NODE_VERSION_NUM: 12.16.1
 
   # PYTHON_VERSION_NUM: # pick a version from https://python.org/ftp/python
 
@@ -54,7 +54,7 @@ jobs:
 
   test_image:
     docker:
-      - image: $DOCKER_USERNAME/JavaNode:latest
+      - image: $DOCKER_USERNAME/NodeJava:latest
         environment:
           <<: *image_config
 
