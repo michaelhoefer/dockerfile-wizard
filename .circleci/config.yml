@@ -4,7 +4,7 @@ image_config: &image_config
   # either as project-specific environment variables
   # or as resources in your organization's org-global Context
 
-  IMAGE_NAME: NodeJava
+  IMAGE_NAME: nodejava
 
   IMAGE_TAG: latest
 
@@ -54,7 +54,7 @@ jobs:
 
   test_image:
     docker:
-      - image: $DOCKER_USERNAME/NodeJava:latest
+      - image: $DOCKER_USERNAME/nodejava:latest
         environment:
           <<: *image_config
 
